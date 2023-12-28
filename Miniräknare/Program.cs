@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace CalculatorWithHistory
@@ -18,6 +19,13 @@ namespace CalculatorWithHistory
             // Visa tidigare resultat
             // Fråga användaren om den vill avsluta eller fortsätta
 
+            //Input / output
+            //Lista med historik
+            //Kontrollstrukturer
+            //Välja lämpligt designmönster
+            //Källkodshantering med GIT
+
+            // Ändra färgen på texten i consolen
             Console.ForegroundColor = ConsoleColor.Blue;
 
 
@@ -41,7 +49,7 @@ namespace CalculatorWithHistory
                 double secondNumber = Convert.ToDouble(Console.ReadLine());
 
                 double results = 0;
-                string uttryck = $"{firtNumber} {operation} {secondNumber}";
+                string calculations = $"{firtNumber} {operation} {secondNumber}";
 
                 switch (operation)
                 {
@@ -70,9 +78,9 @@ namespace CalculatorWithHistory
                         continue;
                 }
 
-                history.Add($"{uttryck} = {results}");
+                history.Add($"{calculations} = {results}");
 
-                Console.WriteLine($"Resultatet av {uttryck} är: {results}");
+                Console.WriteLine($"Resultatet av {calculations} är: {results}");
 
                 Console.WriteLine("Vill du fortsätta? (Ja/Nej)");
                 string svar = Console.ReadLine();
